@@ -1,0 +1,19 @@
+.overlayclass {
+	display: none;
+	position: absolute;
+    background-color: rgba(3, 131, 250, 0.62);
+    margin-top: 80px;
+    width: 100%;
+}
+.frm {
+	display: none;
+}
+
+.notifblock {
+	margin: 0px auto;
+	width: 174px;	
+}
+
+.visible {
+	display: block;
+}

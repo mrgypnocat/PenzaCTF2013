@@ -1,8 +1,8 @@
 ﻿<?php
 	/* глобальная переменная для подключения к БД */
 	global $db_connect;
-	$db_connect = mysql_connect('localhost','','');
-	mysql_select_db('',$db_connect);	
+	$db_connect = mysql_connect('localhost','ctrlpnz','0b9f8e73c5c7');
+	mysql_select_db('ctrlpnz',$db_connect);	
 
 	mysql_query("SET CHARACTER SET `utf8`")or die(mysql_error());
 	mysql_query("SET NAMES `utf8`")or die(mysql_error());

@@ -1,0 +1,27 @@
+
+function generategrid(data)
+{
+	var ret = "";
+	for( var t in data)
+	{
+		ret += "&lt;tr&gt;&lt;td&gt;";
+		//ret += "<tr><td class='name'>";
+		ret += t.cat;
+		ret += "&lt;/td&gt;";
+		for(var tdict in t.tasks)
+		{
+			if(tdict.issolved)
+			{
+				ret += "&lt;td&gt;" + tdict.task.name;
+				//ret += "<td class='tasks'><a href='#' onclick='checktask(" + tdict.task.id + ")'>" + tdict.task.name + "</a>";
+			}
+			else
+			{
+				ret += "&lt;td&gt;" + tdict.task.name;
+			}
+			ret += "&lt;/td&gt;";
+		}
+		ret +="&lt;/tr&gt;";
+	}
+	return ret;
+}
