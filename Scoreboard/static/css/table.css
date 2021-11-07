@@ -1,0 +1,123 @@
+#text{
+	color: #000000;
+	font-size: 16px;
+}
+.overlayclass {
+	display: none;
+	position: absolute;	
+	/*background: url(/static/images/fox111.jpg); 
+	*/
+	background: #000; 
+	color: #fff;
+	border: 5px #CCCCCC solid; 
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+	-khtml- border-radius: 10px; 
+	border-radius: 10px; 
+	padding: 10px auto;	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	left: 15%;
+	right: 15%;
+	text-align: center;
+}
+.frm {
+	display: none;
+}
+.close{	
+}
+.visible {
+	display: block;
+}
+.hidden {
+	display: none;
+}
+/*
+////////////////////////////////
+////////////Table///////////////
+///////////////////////////////
+*/
+#hor-zebra
+{
+	color: #000000; 	
+	border: 3px #CCCCCC solid; 
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+	-khtml- border-radius: 10px; 
+	border-radius: 10px; 
+	padding: 3px;	
+}
+
+#hor-zebra .first
+{
+	background: #FF2400; 
+}
+#hor-zebra .second
+{		
+	background: #F34723; 
+}
+#hor-zebra .third
+{	
+	background: #FF8C69; 
+}
+#hor-zebra .other
+{	
+	background: #FFFFFF; 
+}
+#hor-zebra .header
+{
+	background: #80D5FF; 
+	font-size: 16px;
+}
+#hor-zebra .logo
+{
+	 width: 50px;
+	 height: 50px;	 
+}
+#hor-zebra a
+{	
+	color: #000000;
+}
+#hor-zebra tr:hover td
+{
+	color: #000000;
+	background: #80D5FF;
+}
+/*
+////////////////////////////////
+////////////Xyeta///////////////
+///////////////////////////////
+*/
+
+#hor-zebra .solved
+{
+	color: #FFFFFF;
+	background: #FF0000; 
+}
+#hor-zebra .tasks
+{
+	color: 000000;
+	background: #00FF37; 
+}
+/*
+////////////////////////////////
+////////////ANTON///////////////
+///////////////////////////////
+*/
+
+
+#hor-zebra .number
+{
+	background: #000000; 
+}
+#hor-zebra .name
+{
+	font-size: 20px;	
+	color: #ffffff;
+}
+#hor-zebra .images
+{
+	width: 48px;
+	margin: 0;
+	padding: 0;
+}

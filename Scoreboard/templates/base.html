@@ -1,54 +1,40 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+  
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css"/>
-<link href="/static/css/style.css" rel="stylesheet" type="text/css" media="screen" />
-<title>{% block hightitle %}{% endblock %}</title>
-{% block scripts %}{% endblock %}
-</head>
-<body>
-<div id="menu-wrapper">
-    <div id="menu">
-        <ul>
-            <li><a href="#"><span style="padding:0px 2px;">Ваш</span><span style="padding:0px 2px;"> адрес:</span> {{ user_address }}</a></li>
-            {% if team %}
-            <li><a href="#"><span style="padding:0px 2px;">Добро </span><span style="padding:0px 2px;">пожаловать,</span>  {{ mteam.name }}</a></li>
-            {% endif %}
-            <li><a href="{% block redirect %} {% endblock %}">{% block name_redirect_page %} {% endblock %}</a></li>
-        </ul>
+    <title>{% block hightitle %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <link rel="stylesheet" href="/static/themes/cyborg/bootstrap.css"/>
+    <link rel="stylesheet" href="/static/css/bootstrap-responsive.css"/>
+    <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/7ef089af6b2dd1ce613b404cd25fc6abc163336c.css"/>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+	{% block scripts %}{% endblock %}
+</head>  
+  <body>
+    <div class="container">
+      <div class="hero-unit">
+        <img src="/static/images/logo.png" class="pull-right" height="150" style="" width="400"/>
+        <h1>IBST.PSU CTF</h1>
+        <p>От команды Ctrl-PNZ</p>
+        
+		{% if team %}
+        <img src="/static/images/pony.png"
+        width="100" height="100" class="pull-left"/>
+        <span class="label pull-left label-inverse">Мы следим за тобой, {{ mteam.name }}</span>
+		{% endif %}
+      </div>
     </div>
-    <!-- end #menu -->
-</div>
-<div id="wrapper">
-    <!-- #header -->
-    <div id="header-wrapper">
-        <div id="header">
-            <div id="logo">
-                <h1><a href="/">IBST.PSU CTF</a></h1>
-                <p>от команды <a href="http://ibst.pnzgu.ru/index.php/vse-ostalnoe/ctrl-pnz">CTRL-PNZ</a></p>                
-
-            </div>
-        </div>
+    <div class="container-fluid">
+      <ul class="nav pull-right nav-tabs">
+        <li class="pull-right">
+          <a href="{% block redirect %} {% endblock %}">{% block name_redirect_page %} {% endblock %}</a> 
+        </li>
+      </ul>
+      <h1 class="page-header">{% block title %}{% endblock %}</h1>
+	  {% block content %}{% endblock %}
     </div>
-    <!-- end #header -->
+  </body>
 
-    <div id="page">
- <h2 align="center">{% block title %}{% endblock %}</h2>
-
-        <!-- #content -->
-        <div id="content">
-            <div class="post">
-                {% block content %}{% endblock %}
-            </div>
-        </div>
-            <!-- end #content -->
-    </div>
-    <!-- end #page -->
-</div>
-<div id="footer">
-    <p>Created by <a href="http://ibst.pnzgu.ru/index.php/vse-ostalnoe/ctrl-pnz">CTRL-PNZ</a>. Design by <a href="http://ibst.pnzgu.ru/index.php/kafedra/kontakty-kafedry-3">Mr.Gypnocat</a>.</p>
-</div>
-<!-- end #footer -->
-</body>
 </html>

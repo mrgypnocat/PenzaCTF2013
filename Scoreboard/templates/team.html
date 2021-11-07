@@ -6,38 +6,30 @@
 
 {% block redirect %}/{% endblock %}
 
-{% block name_redirect_page %}
-   <span style="padding:0px 2px;">Текущий</span>  <span style="padding:0px 2px;">счет</span>
-{% endblock %}
+{% block name_redirect_page %}Текущий счет{% endblock %}
 
 {% block content %}
-<div id="overlay" class="overlayclass">
-    <table width="100%" text-align="center">
-        <tr>
-            <td>
-                <div id="content"></div>
-            </td>
-            <td style="text-align: right;">
-                <input type="button" value="X" onclick="closeOverlay()"/>
-            </td>
-        </tr>
-        <tr>
-            <td COLSPAN="2">
+<div id="overlay" class="overlayclass">    
+        <input type="button" class="btn-danger pull-right" value="X" onclick="closeOverlay()"/>
+		</br>
+        <div id="content" class="text"></div>    
+		</br>        
                 <form id="sendform" class="hidden" enctype="multipart/form-data">
                     {% csrf_token %}
                     <input type="hidden" value="" name="task_id" id="task_id"/>
                     <input type="text" name="flag" id="flag" class="hidden"/>
                     <input type="file" name="file" id="fileupload" class="hidden"/>
-                    <input type="button" value="Отправить" onclick="send_flag()"/>
+                    <input type="button" class="btn btn-primary btn-small" value="Отправить флаг" onclick="send_flag()"/>
                 </form>
                 <div id="flag_accept" class="hidden" style="background: green;">Флаг принят</div>
                 <div id="flag_reject" class="hidden" style="background: red;">Флаг не принят</div>
-                <div id="flag_timeout" class="hidden" style="background: red;">Не так часто! Ждите <span id="time">0</span> секунд</div>
-            </td>
-        </tr>
-    </table>
+                <div id="flag_timeout" class="hidden" style="background: red;">Не так часто! Ждите <span id="time">0</span> секунд</div>           
+     
 </div>
-<table border="5" cellpadding="0" cellspacing="1" id="hor-zebra">
+
+
+
+<table border="5" cellpadding="0" cellspacing="1" id="hor-zebra" class="table table-striped table-hover table-bordered" >
     {% for c in data %}
     <tr>
         <td class="name">
@@ -62,7 +54,11 @@
 </table>
 
 {% endblock %}
+
+
 {% block scripts %}
+<link rel="stylesheet" href="/static/css/table.css"/>
+
 <!-- Some CSS for the jQuery uploader UI -->
 <link rel="stylesheet" href="/static/css/jquery-ui.css" id="theme">
 
